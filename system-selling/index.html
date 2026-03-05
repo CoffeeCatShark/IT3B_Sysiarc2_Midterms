@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT3B - ERP System</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Main App Container -->
+     <!-- Stats Row -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-title">Total Items</div>
+                <div class="stat-value">50</div>
+            </div>
+             <div class="stat-card">
+                <div class="stat-title">Total Customers</div>
+                <div class="stat-value">20</div>
+            </div>
+             <div class="stat-card">
+                <div class="stat-title">Avg Price</div>
+                <div class="stat-value">$489</div>
+            </div>
+        </div>
+
+        <!-- Add Record Form -->
+        <div class="card">
+            <div class="card-header">
+                <i class="far fa-file-alt"></i> Add New Record
+            </div>
+            
+            <form id="add-record-form" onsubmit="event.preventDefault(); alert('Record Added (Simulation)');">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Record Number *</label>
+                        <input type="number" placeholder="Enter ID">
+                    </div>
+                    <div class="form-group">
+                        <label>Customer *</label>
+                        <input type="text" placeholder="Customer Name">
+                    </div>
+                     <div class="form-group">
+                        <label>Item *</label>
+                        <input type="text" placeholder="Item Name">
+                    </div>
+                     <div class="form-group">
+                        <label>Price ($) *</label>
+                        <input type="number" placeholder="0.00">
+                    </div>
+                </div>
+                
+                <div class="form-group" style="max-width: 300px;">
+                    <label>Payment Terms *</label>
+                    <select style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ddd;">
+                        <option>Select Payment Terms</option>
+                        <option>Net 30</option>
+                        <option>COD</option>
+                    </select>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                    <button type="submit" class="btn-primary" style="width: auto; padding: 0.75rem 2rem; margin-right: 1rem;">Add Record</button>
+                    <button type="reset" class="btn-secondary">Reset</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Data Table Placeholder -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search master records..." style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ddd;">
+        </div>
+
+        <div class="data-table-header">
+            <div>Number</div>
+            <div>Customer</div>
+            <div>Item</div>
+            <div>Price</div>
+            <div>Payment Terms</div>
+            <div>Actions</div>
+        </div>
+         <div class="data-table-row">
+            <div>101</div>
+            <div>Acme Corp</div>
+            <div>Widget A</div>
+            <div>$50.00</div>
+            <div>Net 30</div>
+            <div><i class="fas fa-edit" style="color: #667eea; cursor: pointer;"></i></div>
+        </div>
+         <div class="data-table-row">
+            <div>102</div>
+            <div>Globex Inc</div>
+            <div>Gadget B</div>
+            <div>$120.00</div>
+            <div>COD</div>
+            <div><i class="fas fa-edit" style="color: #667eea; cursor: pointer;"></i></div>
+        </div>
+        
+        <button onclick="logout()" class="btn-secondary" style="margin-top: 2rem;">Logout</button>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
