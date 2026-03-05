@@ -529,13 +529,6 @@
 
       renderConsolidatedReport();
 
-      // Logout handler
-      document
-        .querySelector('a[href="../login.html"]')
-        ?.addEventListener("click", (e) => {
-          e.preventDefault();
-          AuthGuard.logout();
-        });
     });
   </script>
 </body>
